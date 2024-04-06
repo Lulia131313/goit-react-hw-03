@@ -1,9 +1,19 @@
-
+import { useState } from "react";
 
 const SearchBox = () => {
-  return (
-    <div>SearchBox</div>
-  )
-}
+  const [inputValue, setInputValue] = useState("");
 
-export default SearchBox
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+    console.log(e.target.value);
+  };
+
+  return (
+    <div>
+      <p>Find contacts by name</p>
+      <input type="text" value={inputValue} onChange={handleChange} />
+    </div>
+  );
+};
+
+export default SearchBox;

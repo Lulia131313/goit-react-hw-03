@@ -1,10 +1,14 @@
+import s from "./Contacts/ContactList..module.css";
+
 const ContactList = ({ contacts }) => {
   return (
-    <ul>
+    <ul className={s.contacts}>
       {contacts.map((item) => (
-        <li key={item.name}>
-          <p>{item.name}</p>
-          <p>{item.number}</p>
+        <li className={s.contact} key={item.name}>
+          <div>
+            <p>{item.name}</p>
+            <p>{item.number}</p>
+          </div>
           <button>Delete</button>
         </li>
       ))}

@@ -1,9 +1,13 @@
 import s from "./Contact.module.css";
 
 const ContactForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.target.reset();
+  };
   return (
     <div>
-      <form className={s.form}>
+      <form className={s.form} onSubmit={handleSubmit}>
         <label className={s.label} htmlFor="">
           Name
           <input className={s.input} type="name" />
