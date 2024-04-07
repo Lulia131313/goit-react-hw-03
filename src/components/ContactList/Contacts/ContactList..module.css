@@ -1,29 +1,33 @@
 .contacts {
   display: flex;
-
-  gap: 10px;
+  margin: 30px;
+  gap: 20px;
   list-style: none;
   padding: 0;
 }
 
 .contact {
-  border: 1px solid #ccc;
+  border: 2px solid #000000;
   border-radius: 5px;
   padding: 10px;
-  display: flex; /* Добавим flex */
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Чтобы выровнять элементы по вертикали */
   width: fit-content;
-  gap: 20px;
+  gap: 50px;
   p {
-    margin: 0;
+    margin: 10px;
     margin-right: auto;
+    font-weight: bold;
   }
   button {
     display: flex;
     background-color: transparent;
     border: 1px solid black;
     cursor: pointer;
+    background-color: rgb(197, 195, 195);
   }
+}
+.icon {
+  margin-right: 10px;
 }
